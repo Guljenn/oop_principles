@@ -1,6 +1,6 @@
 package abstract_classes;
 
-public class iPhone extends Phone{
+public class iPhone extends Phone implements Camera, Bluetooth{
     public iPhone(){
 
     }
@@ -28,5 +28,16 @@ public class iPhone extends Phone{
     @Override
     public boolean isConvertible() {
         return true;
+    }
+
+    @Override
+    public void takesPhoto() {
+        System.out.println("iPhone takes photo");
+
+    }
+
+    @Override
+    public void connectBluetooth() {
+        System.out.println("iPhone connects to Bluetooth");
     }
 }
